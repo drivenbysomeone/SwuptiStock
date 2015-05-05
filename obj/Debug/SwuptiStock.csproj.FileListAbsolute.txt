@@ -1,0 +1,9 @@
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\bin\Debug\SwuptiStock.exe.config
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\obj\Debug\SwuptiStock.csprojResolveAssemblyReference.cache
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\obj\Debug\SwuptiStock.Properties.Resources.resources
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\obj\Debug\SwuptiStock.csproj.GenerateResource.Cache
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\bin\Debug\SwuptiStock.exe
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\bin\Debug\SwuptiStock.pdb
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\obj\Debug\SwuptiStock.exe
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\obj\Debug\SwuptiStock.pdb
+U:\AspIT1020\2.år - flex\projekter\SwuptiStock\SwuptiStock\obj\Debug\SwuptiStock.Form1.resources
