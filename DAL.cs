@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SwuptiStock
 {
-    class DAL
+     class DAL
     {
         string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=\\nrh1\users$\aspit1020\dokumenter\SwuptiDB.mdf;Integrated Security=True;Connect Timeout=30";
 
@@ -32,11 +32,15 @@ namespace SwuptiStock
 
         }
 
-        //internal DataTable GetFromDB(string input)
-        //{
+         //create 
+        internal DataTable GetFromDB()
+        {
 
-        //    string sql = "SELECT * FROM "
-        //}
+            string queryString = "SELECT * FROM Brands";
+            return GetData(queryString);
+          
+
+        }
 
     }
 }
