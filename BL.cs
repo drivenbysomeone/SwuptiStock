@@ -12,9 +12,8 @@ namespace SwuptiStock
     {
         DAL dal = new DAL();
 
-         internal List<Brands> GetDataCmbBox()
-         internal List<Stock> GetDataLstBox()
-        
+        internal List<Brands> GetDataCmbBox()
+               
         {
 
             DataTable dt = dal.GetFromDbBrands();
@@ -28,7 +27,11 @@ namespace SwuptiStock
             }
             return l;
 
+        }
 
+
+        internal List<Stock> GetDataLstBox()
+        {
             DataTable dt2 = dal.GetModelName();
             var l2 = new List<Stock>();
             foreach (DataRow item in dt2.Rows)
@@ -42,6 +45,7 @@ namespace SwuptiStock
             return l2;
 
         }
+
 
       
 

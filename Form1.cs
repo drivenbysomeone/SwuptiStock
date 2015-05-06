@@ -31,12 +31,26 @@ namespace SwuptiStock
 
         private void allModelNamesRevealed()
         {
+      
             listBox1.ValueMember = "ProductId";
             listBox1.DisplayMember = "ModelName";
             listBox1.DataSource = bl.GetDataLstBox();
         }
-      
 
-      
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            if (cmbBoxSearchBrands.DataSource == cmbBoxSearchBrands.DataSource)
+            {
+                MessageBox.Show("this is:" + cmbBoxSearchBrands.DataSource);
+            }
+     
+            // use old method. and a foreach that matches the following brandName..
+ 
+
+        }
+
+
+ 
     }
 }

@@ -58,7 +58,7 @@ namespace SwuptiStock
 
         internal DataTable GetModelName()
         {
-            string queryString = "SELECT ModelName FROM Stock";
+            string queryString = "SELECT ProductId, ModelName FROM Stock";
             return GetDataLstBox(queryString);
         }
       

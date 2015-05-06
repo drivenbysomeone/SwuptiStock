@@ -134,6 +134,7 @@
             this.btnSearch.TabIndex = 42;
             this.btnSearch.Text = "Søg";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBoxP1
             // 
