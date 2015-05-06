@@ -12,3 +12,4 @@ namespace SwuptiStock
         public string BrandName { get; set; }
     }
 }
+

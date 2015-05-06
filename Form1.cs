@@ -26,17 +26,16 @@ namespace SwuptiStock
         {
             cmbBoxSearchBrands.ValueMember = "Id";
             cmbBoxSearchBrands.DisplayMember = "BrandName";
-            cmbBoxSearchBrands.DataSource = bl.GetData();
+            cmbBoxSearchBrands.DataSource = bl.GetDataCmbBox();
         }
 
         private void allModelNamesRevealed()
         {
-
+            listBox1.ValueMember = "ProductId";
+            listBox1.DisplayMember = "ModelName";
+            listBox1.DataSource = bl.GetDataLstBox();
         }
       
-        // get ModelName
-
-       
 
       
     }

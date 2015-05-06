@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace SwuptiStock
 {
-     class DAL
+    class DAL
     {
-        string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=\\nrh1\users$\aspit1020\dokumenter\SwuptiDB.mdf;Integrated Security=True;Connect Timeout=30";
+        string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=U:\dokumenter\SwuptiDB.mdf;Integrated Security=True;Connect Timeout=30";
 
-        public DataTable GetData(string sql)
+        public DataTable GetDataCmbBox(string sql)
         {
             DataTable dt = new DataTable();
             using (var con = new SqlConnection(connectionString))
@@ -32,15 +32,36 @@ namespace SwuptiStock
 
         }
 
-         //create 
-        internal DataTable GetFromDB()
+        public DataTable GetDataLstBox(string sql)
         {
-
-            string queryString = "SELECT * FROM Brands";
-            return GetData(queryString);
-          
+            DataTable dt2 = new DataTable();
+            using (var con = new SqlConnection(connectionString))
+            {
+                using (var cmd = new SqlCommand(sql, con))
+                {
+                    con.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        dt2.Load(reader);
+                    }
+                }
+                return dt2;
+            }
 
         }
 
+        internal DataTable GetFromDbBrands()
+        {
+            string queryString = "SELECT * FROM Brands";
+            return GetDataCmbBox(queryString);
+        }
+
+        internal DataTable GetModelName()
+        {
+            string queryString = "SELECT ModelName FROM Stock";
+            return GetDataLstBox(queryString);
+        }
+      
     }
 }
+

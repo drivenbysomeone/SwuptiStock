@@ -30,9 +30,9 @@
         {
             this.tabController = new System.Windows.Forms.TabControl();
             this.ShowPruductsPage = new System.Windows.Forms.TabPage();
-            this.ShowStockPage = new System.Windows.Forms.TabPage();
             this.cmbBoxSearchBrands = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.groupBoxP1 = new System.Windows.Forms.GroupBox();
             this.btnUpdateSpecs = new System.Windows.Forms.Button();
             this.lblPlacement = new System.Windows.Forms.Label();
             this.lblSellingPrice = new System.Windows.Forms.Label();
@@ -48,7 +48,6 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.groupBoxP1 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -65,27 +64,28 @@
             this.lblModelName = new System.Windows.Forms.Label();
             this.lblProductType = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.lblAllProducts = new System.Windows.Forms.Label();
             this.lblSearchBrand = new System.Windows.Forms.Label();
-            this.groupBoxP2 = new System.Windows.Forms.GroupBox();
-            this.AmountOfAllProducts = new System.Windows.Forms.Label();
-            this.TotalPuchaseValue = new System.Windows.Forms.Label();
-            this.totalSellingPrice = new System.Windows.Forms.Label();
-            this.profit = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ShowStockPage = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBoxP2 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.profit = new System.Windows.Forms.Label();
+            this.totalSellingPrice = new System.Windows.Forms.Label();
+            this.TotalPuchaseValue = new System.Windows.Forms.Label();
+            this.AmountOfAllProducts = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabController.SuspendLayout();
             this.ShowPruductsPage.SuspendLayout();
-            this.ShowStockPage.SuspendLayout();
             this.groupBoxP1.SuspendLayout();
-            this.groupBoxP2.SuspendLayout();
+            this.ShowStockPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxP2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabController
@@ -100,10 +100,10 @@
             // 
             // ShowPruductsPage
             // 
+            this.ShowPruductsPage.Controls.Add(this.listBox1);
             this.ShowPruductsPage.Controls.Add(this.cmbBoxSearchBrands);
             this.ShowPruductsPage.Controls.Add(this.btnSearch);
             this.ShowPruductsPage.Controls.Add(this.groupBoxP1);
-            this.ShowPruductsPage.Controls.Add(this.listView1);
             this.ShowPruductsPage.Controls.Add(this.lblAllProducts);
             this.ShowPruductsPage.Controls.Add(this.lblSearchBrand);
             this.ShowPruductsPage.Location = new System.Drawing.Point(4, 22);
@@ -113,19 +113,6 @@
             this.ShowPruductsPage.TabIndex = 0;
             this.ShowPruductsPage.Text = "Vis produkter";
             this.ShowPruductsPage.UseVisualStyleBackColor = true;
-            // 
-            // ShowStockPage
-            // 
-            this.ShowStockPage.Controls.Add(this.dataGridView1);
-            this.ShowStockPage.Controls.Add(this.label5);
-            this.ShowStockPage.Controls.Add(this.groupBoxP2);
-            this.ShowStockPage.Location = new System.Drawing.Point(4, 22);
-            this.ShowStockPage.Name = "ShowStockPage";
-            this.ShowStockPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ShowStockPage.Size = new System.Drawing.Size(672, 403);
-            this.ShowStockPage.TabIndex = 1;
-            this.ShowStockPage.Text = "Vis beholdning";
-            this.ShowStockPage.UseVisualStyleBackColor = true;
             // 
             // cmbBoxSearchBrands
             // 
@@ -138,7 +125,6 @@
             this.cmbBoxSearchBrands.Name = "cmbBoxSearchBrands";
             this.cmbBoxSearchBrands.Size = new System.Drawing.Size(147, 21);
             this.cmbBoxSearchBrands.TabIndex = 43;
-         
             // 
             // btnSearch
             // 
@@ -148,6 +134,46 @@
             this.btnSearch.TabIndex = 42;
             this.btnSearch.Text = "Søg";
             this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxP1
+            // 
+            this.groupBoxP1.Controls.Add(this.btnUpdateSpecs);
+            this.groupBoxP1.Controls.Add(this.lblPlacement);
+            this.groupBoxP1.Controls.Add(this.lblSellingPrice);
+            this.groupBoxP1.Controls.Add(this.textBox15);
+            this.groupBoxP1.Controls.Add(this.textBox14);
+            this.groupBoxP1.Controls.Add(this.textBox13);
+            this.groupBoxP1.Controls.Add(this.lblScreen);
+            this.groupBoxP1.Controls.Add(this.textBox12);
+            this.groupBoxP1.Controls.Add(this.lblRAM);
+            this.groupBoxP1.Controls.Add(this.textBox11);
+            this.groupBoxP1.Controls.Add(this.textBox10);
+            this.groupBoxP1.Controls.Add(this.textBox9);
+            this.groupBoxP1.Controls.Add(this.textBox8);
+            this.groupBoxP1.Controls.Add(this.textBox7);
+            this.groupBoxP1.Controls.Add(this.textBox6);
+            this.groupBoxP1.Controls.Add(this.textBox5);
+            this.groupBoxP1.Controls.Add(this.textBox4);
+            this.groupBoxP1.Controls.Add(this.textBox3);
+            this.groupBoxP1.Controls.Add(this.textBox2);
+            this.groupBoxP1.Controls.Add(this.textBox1);
+            this.groupBoxP1.Controls.Add(this.lblBrand);
+            this.groupBoxP1.Controls.Add(this.lblProcessor);
+            this.groupBoxP1.Controls.Add(this.lblQuantity);
+            this.groupBoxP1.Controls.Add(this.lblPeformanceSpeed);
+            this.groupBoxP1.Controls.Add(this.lblPurchaseValue);
+            this.groupBoxP1.Controls.Add(this.lblOsSystem);
+            this.groupBoxP1.Controls.Add(this.lblHDDSize);
+            this.groupBoxP1.Controls.Add(this.lblGraphicCard);
+            this.groupBoxP1.Controls.Add(this.lblModelName);
+            this.groupBoxP1.Controls.Add(this.lblProductType);
+            this.groupBoxP1.Controls.Add(this.lblCategory);
+            this.groupBoxP1.Location = new System.Drawing.Point(331, 27);
+            this.groupBoxP1.Name = "groupBoxP1";
+            this.groupBoxP1.Size = new System.Drawing.Size(333, 321);
+            this.groupBoxP1.TabIndex = 41;
+            this.groupBoxP1.TabStop = false;
+            this.groupBoxP1.Text = "Specifikationer";
             // 
             // btnUpdateSpecs
             // 
@@ -273,46 +299,6 @@
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(87, 20);
             this.textBox6.TabIndex = 21;
-            // 
-            // groupBoxP1
-            // 
-            this.groupBoxP1.Controls.Add(this.btnUpdateSpecs);
-            this.groupBoxP1.Controls.Add(this.lblPlacement);
-            this.groupBoxP1.Controls.Add(this.lblSellingPrice);
-            this.groupBoxP1.Controls.Add(this.textBox15);
-            this.groupBoxP1.Controls.Add(this.textBox14);
-            this.groupBoxP1.Controls.Add(this.textBox13);
-            this.groupBoxP1.Controls.Add(this.lblScreen);
-            this.groupBoxP1.Controls.Add(this.textBox12);
-            this.groupBoxP1.Controls.Add(this.lblRAM);
-            this.groupBoxP1.Controls.Add(this.textBox11);
-            this.groupBoxP1.Controls.Add(this.textBox10);
-            this.groupBoxP1.Controls.Add(this.textBox9);
-            this.groupBoxP1.Controls.Add(this.textBox8);
-            this.groupBoxP1.Controls.Add(this.textBox7);
-            this.groupBoxP1.Controls.Add(this.textBox6);
-            this.groupBoxP1.Controls.Add(this.textBox5);
-            this.groupBoxP1.Controls.Add(this.textBox4);
-            this.groupBoxP1.Controls.Add(this.textBox3);
-            this.groupBoxP1.Controls.Add(this.textBox2);
-            this.groupBoxP1.Controls.Add(this.textBox1);
-            this.groupBoxP1.Controls.Add(this.lblBrand);
-            this.groupBoxP1.Controls.Add(this.lblProcessor);
-            this.groupBoxP1.Controls.Add(this.lblQuantity);
-            this.groupBoxP1.Controls.Add(this.lblPeformanceSpeed);
-            this.groupBoxP1.Controls.Add(this.lblPurchaseValue);
-            this.groupBoxP1.Controls.Add(this.lblOsSystem);
-            this.groupBoxP1.Controls.Add(this.lblHDDSize);
-            this.groupBoxP1.Controls.Add(this.lblGraphicCard);
-            this.groupBoxP1.Controls.Add(this.lblModelName);
-            this.groupBoxP1.Controls.Add(this.lblProductType);
-            this.groupBoxP1.Controls.Add(this.lblCategory);
-            this.groupBoxP1.Location = new System.Drawing.Point(331, 27);
-            this.groupBoxP1.Name = "groupBoxP1";
-            this.groupBoxP1.Size = new System.Drawing.Size(333, 321);
-            this.groupBoxP1.TabIndex = 41;
-            this.groupBoxP1.TabStop = false;
-            this.groupBoxP1.Text = "Specifikationer";
             // 
             // textBox5
             // 
@@ -453,15 +439,6 @@
             this.lblCategory.TabIndex = 5;
             this.lblCategory.Text = "Kategori:";
             // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(9, 43);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(316, 291);
-            this.listView1.TabIndex = 38;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-         
-            // 
             // lblAllProducts
             // 
             this.lblAllProducts.AutoSize = true;
@@ -479,6 +456,36 @@
             this.lblSearchBrand.Size = new System.Drawing.Size(62, 13);
             this.lblSearchBrand.TabIndex = 39;
             this.lblSearchBrand.Text = "Søg mærke";
+            // 
+            // ShowStockPage
+            // 
+            this.ShowStockPage.Controls.Add(this.dataGridView1);
+            this.ShowStockPage.Controls.Add(this.label5);
+            this.ShowStockPage.Controls.Add(this.groupBoxP2);
+            this.ShowStockPage.Location = new System.Drawing.Point(4, 22);
+            this.ShowStockPage.Name = "ShowStockPage";
+            this.ShowStockPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ShowStockPage.Size = new System.Drawing.Size(672, 403);
+            this.ShowStockPage.TabIndex = 1;
+            this.ShowStockPage.Text = "Vis beholdning";
+            this.ShowStockPage.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(329, 77);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(326, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "label5";
             // 
             // groupBoxP2
             // 
@@ -498,32 +505,46 @@
             this.groupBoxP2.TabStop = false;
             this.groupBoxP2.Text = "Nuværende beholdning";
             // 
-            // AmountOfAllProducts
+            // btnAdd
             // 
-            this.AmountOfAllProducts.AutoSize = true;
-            this.AmountOfAllProducts.Location = new System.Drawing.Point(23, 42);
-            this.AmountOfAllProducts.Name = "AmountOfAllProducts";
-            this.AmountOfAllProducts.Size = new System.Drawing.Size(98, 13);
-            this.AmountOfAllProducts.TabIndex = 0;
-            this.AmountOfAllProducts.Text = "Antal produkter ialt:";
+            this.btnAdd.Location = new System.Drawing.Point(119, 192);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Tilføj";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // TotalPuchaseValue
+            // textBox19
             // 
-            this.TotalPuchaseValue.AutoSize = true;
-            this.TotalPuchaseValue.Location = new System.Drawing.Point(23, 79);
-            this.TotalPuchaseValue.Name = "TotalPuchaseValue";
-            this.TotalPuchaseValue.Size = new System.Drawing.Size(78, 13);
-            this.TotalPuchaseValue.TabIndex = 1;
-            this.TotalPuchaseValue.Text = "købpris ialt kr. :";
+            this.textBox19.Location = new System.Drawing.Point(119, 149);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.ReadOnly = true;
+            this.textBox19.Size = new System.Drawing.Size(100, 20);
+            this.textBox19.TabIndex = 7;
             // 
-            // totalSellingPrice
+            // textBox18
             // 
-            this.totalSellingPrice.AutoSize = true;
-            this.totalSellingPrice.Location = new System.Drawing.Point(23, 115);
-            this.totalSellingPrice.Name = "totalSellingPrice";
-            this.totalSellingPrice.Size = new System.Drawing.Size(86, 13);
-            this.totalSellingPrice.TabIndex = 2;
-            this.totalSellingPrice.Text = "Salgspris ialt kr. :";
+            this.textBox18.Location = new System.Drawing.Point(119, 112);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(100, 20);
+            this.textBox18.TabIndex = 6;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(119, 76);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
+            this.textBox17.Size = new System.Drawing.Size(100, 20);
+            this.textBox17.TabIndex = 5;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(119, 39);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(100, 20);
+            this.textBox16.TabIndex = 4;
             // 
             // profit
             // 
@@ -534,63 +555,40 @@
             this.profit.TabIndex = 3;
             this.profit.Text = "Fortjeneste Kr. :";
             // 
-            // textBox16
+            // totalSellingPrice
             // 
-            this.textBox16.Location = new System.Drawing.Point(119, 39);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 4;
+            this.totalSellingPrice.AutoSize = true;
+            this.totalSellingPrice.Location = new System.Drawing.Point(23, 115);
+            this.totalSellingPrice.Name = "totalSellingPrice";
+            this.totalSellingPrice.Size = new System.Drawing.Size(86, 13);
+            this.totalSellingPrice.TabIndex = 2;
+            this.totalSellingPrice.Text = "Salgspris ialt kr. :";
             // 
-            // textBox17
+            // TotalPuchaseValue
             // 
-            this.textBox17.Location = new System.Drawing.Point(119, 76);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 5;
+            this.TotalPuchaseValue.AutoSize = true;
+            this.TotalPuchaseValue.Location = new System.Drawing.Point(23, 79);
+            this.TotalPuchaseValue.Name = "TotalPuchaseValue";
+            this.TotalPuchaseValue.Size = new System.Drawing.Size(78, 13);
+            this.TotalPuchaseValue.TabIndex = 1;
+            this.TotalPuchaseValue.Text = "købpris ialt kr. :";
             // 
-            // textBox18
+            // AmountOfAllProducts
             // 
-            this.textBox18.Location = new System.Drawing.Point(119, 112);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 6;
+            this.AmountOfAllProducts.AutoSize = true;
+            this.AmountOfAllProducts.Location = new System.Drawing.Point(23, 42);
+            this.AmountOfAllProducts.Name = "AmountOfAllProducts";
+            this.AmountOfAllProducts.Size = new System.Drawing.Size(98, 13);
+            this.AmountOfAllProducts.TabIndex = 0;
+            this.AmountOfAllProducts.Text = "Antal produkter ialt:";
             // 
-            // textBox19
+            // listBox1
             // 
-            this.textBox19.Location = new System.Drawing.Point(119, 149);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
-            this.textBox19.TabIndex = 7;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(119, 192);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 8;
-            this.btnAdd.Text = "Tilføj";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(326, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(329, 77);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 10;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(13, 47);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(312, 290);
+            this.listBox1.TabIndex = 44;
             // 
             // Form1
             // 
@@ -603,13 +601,13 @@
             this.tabController.ResumeLayout(false);
             this.ShowPruductsPage.ResumeLayout(false);
             this.ShowPruductsPage.PerformLayout();
-            this.ShowStockPage.ResumeLayout(false);
-            this.ShowStockPage.PerformLayout();
             this.groupBoxP1.ResumeLayout(false);
             this.groupBoxP1.PerformLayout();
+            this.ShowStockPage.ResumeLayout(false);
+            this.ShowStockPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxP2.ResumeLayout(false);
             this.groupBoxP2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -652,7 +650,6 @@
         private System.Windows.Forms.Label lblModelName;
         private System.Windows.Forms.Label lblProductType;
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label lblAllProducts;
         private System.Windows.Forms.Label lblSearchBrand;
         private System.Windows.Forms.TabPage ShowStockPage;
@@ -668,6 +665,7 @@
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListBox listBox1;
 
 
     }
