@@ -30,29 +30,30 @@
         {
             this.tabController = new System.Windows.Forms.TabControl();
             this.ShowPruductsPage = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.cmbBoxSearchBrands = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBoxP1 = new System.Windows.Forms.GroupBox();
             this.btnUpdateSpecs = new System.Windows.Forms.Button();
             this.lblPlacement = new System.Windows.Forms.Label();
             this.lblSellingPrice = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtBoxStorageLocation = new System.Windows.Forms.TextBox();
+            this.txtBoxSellingPrice = new System.Windows.Forms.TextBox();
+            this.txtBoxScreen = new System.Windows.Forms.TextBox();
             this.lblScreen = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtBoxRAM = new System.Windows.Forms.TextBox();
             this.lblRAM = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxNumberQuantity = new System.Windows.Forms.TextBox();
+            this.txtBoxPurchasePrice = new System.Windows.Forms.TextBox();
+            this.txtBoxHdSize = new System.Windows.Forms.TextBox();
+            this.txtBocGraphicCard = new System.Windows.Forms.TextBox();
+            this.txtBoxOS = new System.Windows.Forms.TextBox();
+            this.txtBoxSpeed = new System.Windows.Forms.TextBox();
+            this.txtBoxProcessor = new System.Windows.Forms.TextBox();
+            this.txtBoxModelName = new System.Windows.Forms.TextBox();
+            this.txtBoxBrand = new System.Windows.Forms.TextBox();
+            this.txtBoxProductType = new System.Windows.Forms.TextBox();
+            this.txtBoxCategory = new System.Windows.Forms.TextBox();
             this.lblBrand = new System.Windows.Forms.Label();
             this.lblProcessor = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
@@ -68,7 +69,7 @@
             this.lblSearchBrand = new System.Windows.Forms.Label();
             this.ShowStockPage = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblPreviousProductsInStock = new System.Windows.Forms.Label();
             this.groupBoxP2 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -79,7 +80,6 @@
             this.totalSellingPrice = new System.Windows.Forms.Label();
             this.TotalPuchaseValue = new System.Windows.Forms.Label();
             this.AmountOfAllProducts = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabController.SuspendLayout();
             this.ShowPruductsPage.SuspendLayout();
             this.groupBoxP1.SuspendLayout();
@@ -114,6 +114,15 @@
             this.ShowPruductsPage.Text = "Vis produkter";
             this.ShowPruductsPage.UseVisualStyleBackColor = true;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(13, 47);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(312, 290);
+            this.listBox1.TabIndex = 44;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // cmbBoxSearchBrands
             // 
             this.cmbBoxSearchBrands.FormattingEnabled = true;
@@ -141,23 +150,23 @@
             this.groupBoxP1.Controls.Add(this.btnUpdateSpecs);
             this.groupBoxP1.Controls.Add(this.lblPlacement);
             this.groupBoxP1.Controls.Add(this.lblSellingPrice);
-            this.groupBoxP1.Controls.Add(this.textBox15);
-            this.groupBoxP1.Controls.Add(this.textBox14);
-            this.groupBoxP1.Controls.Add(this.textBox13);
+            this.groupBoxP1.Controls.Add(this.txtBoxStorageLocation);
+            this.groupBoxP1.Controls.Add(this.txtBoxSellingPrice);
+            this.groupBoxP1.Controls.Add(this.txtBoxScreen);
             this.groupBoxP1.Controls.Add(this.lblScreen);
-            this.groupBoxP1.Controls.Add(this.textBox12);
+            this.groupBoxP1.Controls.Add(this.txtBoxRAM);
             this.groupBoxP1.Controls.Add(this.lblRAM);
-            this.groupBoxP1.Controls.Add(this.textBox11);
-            this.groupBoxP1.Controls.Add(this.textBox10);
-            this.groupBoxP1.Controls.Add(this.textBox9);
-            this.groupBoxP1.Controls.Add(this.textBox8);
-            this.groupBoxP1.Controls.Add(this.textBox7);
-            this.groupBoxP1.Controls.Add(this.textBox6);
-            this.groupBoxP1.Controls.Add(this.textBox5);
-            this.groupBoxP1.Controls.Add(this.textBox4);
-            this.groupBoxP1.Controls.Add(this.textBox3);
-            this.groupBoxP1.Controls.Add(this.textBox2);
-            this.groupBoxP1.Controls.Add(this.textBox1);
+            this.groupBoxP1.Controls.Add(this.txtBoxNumberQuantity);
+            this.groupBoxP1.Controls.Add(this.txtBoxPurchasePrice);
+            this.groupBoxP1.Controls.Add(this.txtBoxHdSize);
+            this.groupBoxP1.Controls.Add(this.txtBocGraphicCard);
+            this.groupBoxP1.Controls.Add(this.txtBoxOS);
+            this.groupBoxP1.Controls.Add(this.txtBoxSpeed);
+            this.groupBoxP1.Controls.Add(this.txtBoxProcessor);
+            this.groupBoxP1.Controls.Add(this.txtBoxModelName);
+            this.groupBoxP1.Controls.Add(this.txtBoxBrand);
+            this.groupBoxP1.Controls.Add(this.txtBoxProductType);
+            this.groupBoxP1.Controls.Add(this.txtBoxCategory);
             this.groupBoxP1.Controls.Add(this.lblBrand);
             this.groupBoxP1.Controls.Add(this.lblProcessor);
             this.groupBoxP1.Controls.Add(this.lblQuantity);
@@ -184,6 +193,7 @@
             this.btnUpdateSpecs.TabIndex = 35;
             this.btnUpdateSpecs.Text = "Opdater";
             this.btnUpdateSpecs.UseVisualStyleBackColor = true;
+            this.btnUpdateSpecs.Click += new System.EventHandler(this.btnUpdateSpecs_Click);
             // 
             // lblPlacement
             // 
@@ -203,29 +213,29 @@
             this.lblSellingPrice.TabIndex = 33;
             this.lblSellingPrice.Text = "Salgspris:";
             // 
-            // textBox15
+            // txtBoxStorageLocation
             // 
-            this.textBox15.Location = new System.Drawing.Point(252, 258);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(75, 20);
-            this.textBox15.TabIndex = 32;
+            this.txtBoxStorageLocation.Location = new System.Drawing.Point(252, 258);
+            this.txtBoxStorageLocation.Name = "txtBoxStorageLocation";
+            this.txtBoxStorageLocation.ReadOnly = true;
+            this.txtBoxStorageLocation.Size = new System.Drawing.Size(75, 20);
+            this.txtBoxStorageLocation.TabIndex = 32;
             // 
-            // textBox14
+            // txtBoxSellingPrice
             // 
-            this.textBox14.Location = new System.Drawing.Point(252, 235);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(75, 20);
-            this.textBox14.TabIndex = 31;
+            this.txtBoxSellingPrice.Location = new System.Drawing.Point(252, 235);
+            this.txtBoxSellingPrice.Name = "txtBoxSellingPrice";
+            this.txtBoxSellingPrice.ReadOnly = true;
+            this.txtBoxSellingPrice.Size = new System.Drawing.Size(75, 20);
+            this.txtBoxSellingPrice.TabIndex = 31;
             // 
-            // textBox13
+            // txtBoxScreen
             // 
-            this.textBox13.Location = new System.Drawing.Point(252, 211);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(75, 20);
-            this.textBox13.TabIndex = 30;
+            this.txtBoxScreen.Location = new System.Drawing.Point(252, 211);
+            this.txtBoxScreen.Name = "txtBoxScreen";
+            this.txtBoxScreen.ReadOnly = true;
+            this.txtBoxScreen.Size = new System.Drawing.Size(75, 20);
+            this.txtBoxScreen.TabIndex = 30;
             // 
             // lblScreen
             // 
@@ -236,13 +246,13 @@
             this.lblScreen.TabIndex = 29;
             this.lblScreen.Text = "Skærm:";
             // 
-            // textBox12
+            // txtBoxRAM
             // 
-            this.textBox12.Location = new System.Drawing.Point(230, 140);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(97, 20);
-            this.textBox12.TabIndex = 28;
+            this.txtBoxRAM.Location = new System.Drawing.Point(230, 140);
+            this.txtBoxRAM.Name = "txtBoxRAM";
+            this.txtBoxRAM.ReadOnly = true;
+            this.txtBoxRAM.Size = new System.Drawing.Size(97, 20);
+            this.txtBoxRAM.TabIndex = 28;
             // 
             // lblRAM
             // 
@@ -253,93 +263,93 @@
             this.lblRAM.TabIndex = 27;
             this.lblRAM.Text = "RAM:";
             // 
-            // textBox11
+            // txtBoxNumberQuantity
             // 
-            this.textBox11.Location = new System.Drawing.Point(78, 258);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 26;
+            this.txtBoxNumberQuantity.Location = new System.Drawing.Point(78, 258);
+            this.txtBoxNumberQuantity.Name = "txtBoxNumberQuantity";
+            this.txtBoxNumberQuantity.ReadOnly = true;
+            this.txtBoxNumberQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxNumberQuantity.TabIndex = 26;
             // 
-            // textBox10
+            // txtBoxPurchasePrice
             // 
-            this.textBox10.Location = new System.Drawing.Point(78, 235);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 25;
+            this.txtBoxPurchasePrice.Location = new System.Drawing.Point(78, 235);
+            this.txtBoxPurchasePrice.Name = "txtBoxPurchasePrice";
+            this.txtBoxPurchasePrice.ReadOnly = true;
+            this.txtBoxPurchasePrice.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxPurchasePrice.TabIndex = 25;
             // 
-            // textBox9
+            // txtBoxHdSize
             // 
-            this.textBox9.Location = new System.Drawing.Point(78, 211);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 24;
+            this.txtBoxHdSize.Location = new System.Drawing.Point(78, 211);
+            this.txtBoxHdSize.Name = "txtBoxHdSize";
+            this.txtBoxHdSize.ReadOnly = true;
+            this.txtBoxHdSize.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxHdSize.TabIndex = 24;
             // 
-            // textBox8
+            // txtBocGraphicCard
             // 
-            this.textBox8.Location = new System.Drawing.Point(78, 188);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(249, 20);
-            this.textBox8.TabIndex = 23;
+            this.txtBocGraphicCard.Location = new System.Drawing.Point(78, 188);
+            this.txtBocGraphicCard.Name = "txtBocGraphicCard";
+            this.txtBocGraphicCard.ReadOnly = true;
+            this.txtBocGraphicCard.Size = new System.Drawing.Size(249, 20);
+            this.txtBocGraphicCard.TabIndex = 23;
             // 
-            // textBox7
+            // txtBoxOS
             // 
-            this.textBox7.Location = new System.Drawing.Point(78, 163);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(249, 20);
-            this.textBox7.TabIndex = 22;
+            this.txtBoxOS.Location = new System.Drawing.Point(78, 163);
+            this.txtBoxOS.Name = "txtBoxOS";
+            this.txtBoxOS.ReadOnly = true;
+            this.txtBoxOS.Size = new System.Drawing.Size(249, 20);
+            this.txtBoxOS.TabIndex = 22;
             // 
-            // textBox6
+            // txtBoxSpeed
             // 
-            this.textBox6.Location = new System.Drawing.Point(78, 140);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(87, 20);
-            this.textBox6.TabIndex = 21;
+            this.txtBoxSpeed.Location = new System.Drawing.Point(78, 140);
+            this.txtBoxSpeed.Name = "txtBoxSpeed";
+            this.txtBoxSpeed.ReadOnly = true;
+            this.txtBoxSpeed.Size = new System.Drawing.Size(87, 20);
+            this.txtBoxSpeed.TabIndex = 21;
             // 
-            // textBox5
+            // txtBoxProcessor
             // 
-            this.textBox5.Location = new System.Drawing.Point(78, 117);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(249, 20);
-            this.textBox5.TabIndex = 20;
+            this.txtBoxProcessor.Location = new System.Drawing.Point(78, 117);
+            this.txtBoxProcessor.Name = "txtBoxProcessor";
+            this.txtBoxProcessor.ReadOnly = true;
+            this.txtBoxProcessor.Size = new System.Drawing.Size(249, 20);
+            this.txtBoxProcessor.TabIndex = 20;
             // 
-            // textBox4
+            // txtBoxModelName
             // 
-            this.textBox4.Location = new System.Drawing.Point(78, 94);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(249, 20);
-            this.textBox4.TabIndex = 19;
+            this.txtBoxModelName.Location = new System.Drawing.Point(78, 94);
+            this.txtBoxModelName.Name = "txtBoxModelName";
+            this.txtBoxModelName.ReadOnly = true;
+            this.txtBoxModelName.Size = new System.Drawing.Size(249, 20);
+            this.txtBoxModelName.TabIndex = 19;
             // 
-            // textBox3
+            // txtBoxBrand
             // 
-            this.textBox3.Location = new System.Drawing.Point(78, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(249, 20);
-            this.textBox3.TabIndex = 18;
+            this.txtBoxBrand.Location = new System.Drawing.Point(78, 71);
+            this.txtBoxBrand.Name = "txtBoxBrand";
+            this.txtBoxBrand.ReadOnly = true;
+            this.txtBoxBrand.Size = new System.Drawing.Size(249, 20);
+            this.txtBoxBrand.TabIndex = 18;
             // 
-            // textBox2
+            // txtBoxProductType
             // 
-            this.textBox2.Location = new System.Drawing.Point(78, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(249, 20);
-            this.textBox2.TabIndex = 17;
+            this.txtBoxProductType.Location = new System.Drawing.Point(78, 48);
+            this.txtBoxProductType.Name = "txtBoxProductType";
+            this.txtBoxProductType.ReadOnly = true;
+            this.txtBoxProductType.Size = new System.Drawing.Size(249, 20);
+            this.txtBoxProductType.TabIndex = 17;
             // 
-            // textBox1
+            // txtBoxCategory
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(249, 20);
-            this.textBox1.TabIndex = 16;
+            this.txtBoxCategory.Location = new System.Drawing.Point(78, 26);
+            this.txtBoxCategory.Name = "txtBoxCategory";
+            this.txtBoxCategory.ReadOnly = true;
+            this.txtBoxCategory.Size = new System.Drawing.Size(249, 20);
+            this.txtBoxCategory.TabIndex = 16;
             // 
             // lblBrand
             // 
@@ -461,7 +471,7 @@
             // ShowStockPage
             // 
             this.ShowStockPage.Controls.Add(this.dataGridView1);
-            this.ShowStockPage.Controls.Add(this.label5);
+            this.ShowStockPage.Controls.Add(this.lblPreviousProductsInStock);
             this.ShowStockPage.Controls.Add(this.groupBoxP2);
             this.ShowStockPage.Location = new System.Drawing.Point(4, 22);
             this.ShowStockPage.Name = "ShowStockPage";
@@ -479,14 +489,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 10;
             // 
-            // label5
+            // lblPreviousProductsInStock
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(326, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
+            this.lblPreviousProductsInStock.AutoSize = true;
+            this.lblPreviousProductsInStock.Location = new System.Drawing.Point(326, 48);
+            this.lblPreviousProductsInStock.Name = "lblPreviousProductsInStock";
+            this.lblPreviousProductsInStock.Size = new System.Drawing.Size(114, 13);
+            this.lblPreviousProductsInStock.TabIndex = 9;
+            this.lblPreviousProductsInStock.Text = "Tidligere beholdninger:";
             // 
             // groupBoxP2
             // 
@@ -583,14 +593,6 @@
             this.AmountOfAllProducts.TabIndex = 0;
             this.AmountOfAllProducts.Text = "Antal produkter ialt:";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 47);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(312, 290);
-            this.listBox1.TabIndex = 44;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,23 +625,23 @@
         private System.Windows.Forms.Button btnUpdateSpecs;
         private System.Windows.Forms.Label lblPlacement;
         private System.Windows.Forms.Label lblSellingPrice;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtBoxStorageLocation;
+        private System.Windows.Forms.TextBox txtBoxSellingPrice;
+        private System.Windows.Forms.TextBox txtBoxScreen;
         private System.Windows.Forms.Label lblScreen;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtBoxRAM;
         private System.Windows.Forms.Label lblRAM;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxNumberQuantity;
+        private System.Windows.Forms.TextBox txtBoxPurchasePrice;
+        private System.Windows.Forms.TextBox txtBoxHdSize;
+        private System.Windows.Forms.TextBox txtBocGraphicCard;
+        private System.Windows.Forms.TextBox txtBoxOS;
+        private System.Windows.Forms.TextBox txtBoxSpeed;
+        private System.Windows.Forms.TextBox txtBoxProcessor;
+        private System.Windows.Forms.TextBox txtBoxModelName;
+        private System.Windows.Forms.TextBox txtBoxBrand;
+        private System.Windows.Forms.TextBox txtBoxProductType;
+        private System.Windows.Forms.TextBox txtBoxCategory;
         private System.Windows.Forms.Label lblBrand;
         private System.Windows.Forms.Label lblProcessor;
         private System.Windows.Forms.Label lblQuantity;
@@ -660,7 +662,7 @@
         private System.Windows.Forms.Label totalSellingPrice;
         private System.Windows.Forms.Label TotalPuchaseValue;
         private System.Windows.Forms.Label AmountOfAllProducts;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPreviousProductsInStock;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox18;
