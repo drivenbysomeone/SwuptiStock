@@ -32,6 +32,36 @@ namespace SwuptiStock
 
         }
 
+        public void InsertData(string sql)
+        {
+            using (var con = new SqlConnection(connectionString))
+            {
+                using (var cmd = new SqlCommand(sql, con))
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        internal void UpdateStock(Stock stock)
+        {
+System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+
+
+
+//string sql = "UPDATE Stock SET (Purchase, SellingPrice, Number, StorageLocation) VALUES (" + Convert.ToString(stock.Purchase, culture) + ", " + Convert.ToString(stock.SellingPrice, culture) + ", " + Convert.ToString(stock.Number, culture) + ", '" + stock.StorageLocation + "') WHERE ProductId = " + stock.ProductId;
+
+            //http://lamahashim.blogspot.dk/2010/04/c-read-insert-update-delete-from-sql.html
+string sql = "UPDATE Stock SET Purchase =" + Convert.ToString(stock.Purchase, culture) + ", SellingPrice = " + Convert.ToString(stock.SellingPrice, culture) + ", Number =" + Convert.ToString(stock.Number, culture) + ", StorageLocation = '" + stock.StorageLocation + "' WHERE ProductId = " + stock.ProductId;
+
+            InsertData(sql);
+
+        }
+
+
+        //Create the insert/overload
+    
         internal DataTable GetFromDbBrands()
         {
             string queryString = "SELECT * FROM Brands";
@@ -63,7 +93,10 @@ namespace SwuptiStock
         {
             string queryString = "SELECT * FROM Stock, Brands WHERE Stock.BrandId = Brands.BrandId AND ProductId = " + id;
             return GetData(queryString);
+
         }
+
+
     }
 }
 

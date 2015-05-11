@@ -58,6 +58,7 @@ namespace SwuptiStock
 
         internal Stock GetSingleStockById(int id)
         {
+            
             DataTable dt2 = dal.GetAllStockProperties(id);
             var stock = new Stock();            
             foreach (DataRow item in dt2.Rows)
@@ -78,26 +79,29 @@ namespace SwuptiStock
                 stock.SellingPrice = Convert.ToDecimal(item["SellingPrice"].ToString());
                 stock.Number = Convert.ToInt32(item["Number"].ToString());
                 stock.StorageLocation = item["StorageLocation"].ToString();
-
+                
+                
             }
 
             return stock;
 
         }
 
-        //internal Brands GetSingleStockById(int id)
-        //{
-        //    DataTable dt2 = dal.GetAllStockProperties(id);
-        //    var brands = new Brands();
-        //    foreach (DataRow item in dt2.Rows)
-        //    {
-        //        brands.BrandName = item["Brand"].ToString();
-        //    }
+        internal void UpdateTheStock(decimal purchase, decimal sellingPrice, int number, string location, int productId)
+        {
 
-        //    return brands;
+            Stock stock = new Stock();
 
-        //}
+            stock.ProductId = productId;
+            stock.Purchase = purchase;
+            stock.SellingPrice = sellingPrice;
+            stock.Number = number;
+            stock.StorageLocation = location;
 
+   
+            dal.UpdateStock(stock);
+         
+        }
 
     }
 }

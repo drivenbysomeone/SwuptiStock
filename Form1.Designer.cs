@@ -97,6 +97,7 @@
             this.tabController.SelectedIndex = 0;
             this.tabController.Size = new System.Drawing.Size(680, 429);
             this.tabController.TabIndex = 0;
+            this.tabController.Enter += new System.EventHandler(this.tabController_Enter);
             // 
             // ShowPruductsPage
             // 
@@ -217,7 +218,6 @@
             // 
             this.txtBoxStorageLocation.Location = new System.Drawing.Point(252, 258);
             this.txtBoxStorageLocation.Name = "txtBoxStorageLocation";
-            this.txtBoxStorageLocation.ReadOnly = true;
             this.txtBoxStorageLocation.Size = new System.Drawing.Size(75, 20);
             this.txtBoxStorageLocation.TabIndex = 32;
             // 
@@ -225,7 +225,6 @@
             // 
             this.txtBoxSellingPrice.Location = new System.Drawing.Point(252, 235);
             this.txtBoxSellingPrice.Name = "txtBoxSellingPrice";
-            this.txtBoxSellingPrice.ReadOnly = true;
             this.txtBoxSellingPrice.Size = new System.Drawing.Size(75, 20);
             this.txtBoxSellingPrice.TabIndex = 31;
             // 
@@ -267,7 +266,6 @@
             // 
             this.txtBoxNumberQuantity.Location = new System.Drawing.Point(78, 258);
             this.txtBoxNumberQuantity.Name = "txtBoxNumberQuantity";
-            this.txtBoxNumberQuantity.ReadOnly = true;
             this.txtBoxNumberQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtBoxNumberQuantity.TabIndex = 26;
             // 
@@ -275,7 +273,6 @@
             // 
             this.txtBoxPurchasePrice.Location = new System.Drawing.Point(78, 235);
             this.txtBoxPurchasePrice.Name = "txtBoxPurchasePrice";
-            this.txtBoxPurchasePrice.ReadOnly = true;
             this.txtBoxPurchasePrice.Size = new System.Drawing.Size(100, 20);
             this.txtBoxPurchasePrice.TabIndex = 25;
             // 
@@ -486,7 +483,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(329, 77);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(307, 211);
             this.dataGridView1.TabIndex = 10;
             // 
             // lblPreviousProductsInStock

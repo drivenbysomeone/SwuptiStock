@@ -19,7 +19,7 @@ namespace SwuptiStock
         {
             InitializeComponent();
             allBrandsRevealed();
-            allModelNamesRevealed();
+            allModelNamesRevealed();        
             
         }
 
@@ -86,7 +86,34 @@ namespace SwuptiStock
 
         private void btnUpdateSpecs_Click(object sender, EventArgs e)
         {
+
+            var selectedValue = Convert.ToInt32(listBox1.SelectedValue.ToString());
+            var stock = bl.GetSingleStockById(selectedValue);
+
+            decimal purchasePrice = 0;
+            decimal sellingPrice = 0;
+            int quantity = 0;
+            string storageLocation = "";
+            int theProductId = stock.ProductId;
+            
+            purchasePrice = Convert.ToDecimal(txtBoxPurchasePrice.Text);
+            sellingPrice = Convert.ToDecimal(txtBoxSellingPrice.Text);
+            quantity = Convert.ToInt32(txtBoxNumberQuantity.Text);
+            storageLocation = txtBoxStorageLocation.Text;
+
+            // overwritten values being inserted to Stock:
+            bl.UpdateTheStock(purchasePrice, sellingPrice, quantity, storageLocation, theProductId);
+            
+
             MessageBox.Show("Produkt opdateret");
         }
+
+        private void tabController_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }
