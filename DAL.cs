@@ -114,7 +114,7 @@ string sql = "UPDATE Stock SET Purchase =" + Convert.ToString(stock.Purchase, cu
             return GetData(queryString);
         }
 
-        internal DataTable InsertNewData(int id, DateTime date, decimal totalNumber, decimal purchase, decimal sellingPrice, decimal profit)
+        internal DataTable InsertNewData(Totals totals)
         {
          
             string queryString = "INSERT INTO Totals (InventoryDate, TotalNumber, TotalPurchase, TotalSellingPrice, Profit) VALUES (NOW(), )";
