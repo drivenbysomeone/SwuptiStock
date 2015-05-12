@@ -72,10 +72,10 @@
             this.lblPreviousProductsInStock = new System.Windows.Forms.Label();
             this.groupBoxP2 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtBoxProfit = new System.Windows.Forms.TextBox();
+            this.txtBoxTotalSellingPrice = new System.Windows.Forms.TextBox();
+            this.txtBoxTotalPurchasePrice = new System.Windows.Forms.TextBox();
+            this.txtBoxAllProducts = new System.Windows.Forms.TextBox();
             this.profit = new System.Windows.Forms.Label();
             this.totalSellingPrice = new System.Windows.Forms.Label();
             this.TotalPuchaseValue = new System.Windows.Forms.Label();
@@ -96,7 +96,8 @@
             this.tabController.Name = "tabController";
             this.tabController.SelectedIndex = 0;
             this.tabController.Size = new System.Drawing.Size(680, 429);
-            this.tabController.TabIndex = 0;
+            this.tabController.TabIndex = 2;
+            this.tabController.SelectedIndexChanged += new System.EventHandler(this.tabController_Enter);
             this.tabController.Enter += new System.EventHandler(this.tabController_Enter);
             // 
             // ShowPruductsPage
@@ -498,10 +499,10 @@
             // groupBoxP2
             // 
             this.groupBoxP2.Controls.Add(this.btnAdd);
-            this.groupBoxP2.Controls.Add(this.textBox19);
-            this.groupBoxP2.Controls.Add(this.textBox18);
-            this.groupBoxP2.Controls.Add(this.textBox17);
-            this.groupBoxP2.Controls.Add(this.textBox16);
+            this.groupBoxP2.Controls.Add(this.txtBoxProfit);
+            this.groupBoxP2.Controls.Add(this.txtBoxTotalSellingPrice);
+            this.groupBoxP2.Controls.Add(this.txtBoxTotalPurchasePrice);
+            this.groupBoxP2.Controls.Add(this.txtBoxAllProducts);
             this.groupBoxP2.Controls.Add(this.profit);
             this.groupBoxP2.Controls.Add(this.totalSellingPrice);
             this.groupBoxP2.Controls.Add(this.TotalPuchaseValue);
@@ -521,38 +522,39 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Tilføj";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox19
+            // txtBoxProfit
             // 
-            this.textBox19.Location = new System.Drawing.Point(119, 149);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
-            this.textBox19.TabIndex = 7;
+            this.txtBoxProfit.Location = new System.Drawing.Point(119, 149);
+            this.txtBoxProfit.Name = "txtBoxProfit";
+            this.txtBoxProfit.ReadOnly = true;
+            this.txtBoxProfit.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxProfit.TabIndex = 7;
             // 
-            // textBox18
+            // txtBoxTotalSellingPrice
             // 
-            this.textBox18.Location = new System.Drawing.Point(119, 112);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 6;
+            this.txtBoxTotalSellingPrice.Location = new System.Drawing.Point(119, 112);
+            this.txtBoxTotalSellingPrice.Name = "txtBoxTotalSellingPrice";
+            this.txtBoxTotalSellingPrice.ReadOnly = true;
+            this.txtBoxTotalSellingPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxTotalSellingPrice.TabIndex = 6;
             // 
-            // textBox17
+            // txtBoxTotalPurchasePrice
             // 
-            this.textBox17.Location = new System.Drawing.Point(119, 76);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 5;
+            this.txtBoxTotalPurchasePrice.Location = new System.Drawing.Point(119, 76);
+            this.txtBoxTotalPurchasePrice.Name = "txtBoxTotalPurchasePrice";
+            this.txtBoxTotalPurchasePrice.ReadOnly = true;
+            this.txtBoxTotalPurchasePrice.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxTotalPurchasePrice.TabIndex = 5;
             // 
-            // textBox16
+            // txtBoxAllProducts
             // 
-            this.textBox16.Location = new System.Drawing.Point(119, 39);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 4;
+            this.txtBoxAllProducts.Location = new System.Drawing.Point(119, 39);
+            this.txtBoxAllProducts.Name = "txtBoxAllProducts";
+            this.txtBoxAllProducts.ReadOnly = true;
+            this.txtBoxAllProducts.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxAllProducts.TabIndex = 4;
             // 
             // profit
             // 
@@ -654,16 +656,16 @@
         private System.Windows.Forms.Label lblSearchBrand;
         private System.Windows.Forms.TabPage ShowStockPage;
         private System.Windows.Forms.GroupBox groupBoxP2;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtBoxAllProducts;
         private System.Windows.Forms.Label profit;
         private System.Windows.Forms.Label totalSellingPrice;
         private System.Windows.Forms.Label TotalPuchaseValue;
         private System.Windows.Forms.Label AmountOfAllProducts;
         private System.Windows.Forms.Label lblPreviousProductsInStock;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txtBoxProfit;
+        private System.Windows.Forms.TextBox txtBoxTotalSellingPrice;
+        private System.Windows.Forms.TextBox txtBoxTotalPurchasePrice;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ListBox listBox1;
 

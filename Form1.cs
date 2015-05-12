@@ -12,15 +12,16 @@ namespace SwuptiStock
 {
     public partial class Form1 : Form
     {
-
-        BL bl = new BL();
+ 
+        BL bl = new BL(); 
 
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();       
+
             allBrandsRevealed();
-            allModelNamesRevealed();        
-            
+            allModelNamesRevealed();
+         
         }
 
         private void allBrandsRevealed()
@@ -44,7 +45,6 @@ namespace SwuptiStock
             listBox1.ValueMember = "ProductId";
             listBox1.DisplayMember = "ModelName";
             listBox1.DataSource = bl.GetDataLstBox(id);
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -59,11 +59,9 @@ namespace SwuptiStock
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             var selectedValue = Convert.ToInt32(listBox1.SelectedValue.ToString());          
             var stock = bl.GetSingleStockById(selectedValue);
             
-
             txtBoxCategory.Text = stock.Category;
             txtBoxProductType.Text = stock.ProductType;
             
@@ -80,8 +78,7 @@ namespace SwuptiStock
             txtBoxPurchasePrice.Text = stock.Purchase.ToString();
             txtBoxSellingPrice.Text = stock.SellingPrice.ToString();
             txtBoxNumberQuantity.Text = stock.Number.ToString();
-            txtBoxStorageLocation.Text = stock.StorageLocation;
-       
+            txtBoxStorageLocation.Text = stock.StorageLocation;      
         }
 
         private void btnUpdateSpecs_Click(object sender, EventArgs e)
@@ -101,15 +98,36 @@ namespace SwuptiStock
             quantity = Convert.ToInt32(txtBoxNumberQuantity.Text);
             storageLocation = txtBoxStorageLocation.Text;
 
-            // overwritten values being inserted to Stock:
-            bl.UpdateTheStock(purchasePrice, sellingPrice, quantity, storageLocation, theProductId);
-            
-
+            // overwritten values being updated:
+            bl.UpdateTheStock(purchasePrice, sellingPrice, quantity, storageLocation, theProductId);      
+     
             MessageBox.Show("Produkt opdateret");
+           
         }
 
+        //OBS => in tabControl design view - > events, set: SelectedIndexChanged to tabController_Enter.(So program knows that it is switching between two tabs)
         private void tabController_Enter(object sender, EventArgs e)
         {
+
+ 
+            int allProducts = bl.GetTotalNumberOfProducts();
+            txtBoxAllProducts.Text = allProducts.ToString();
+
+            decimal theTotalPurchase = bl.GetTotalPurchase();
+            txtBoxTotalPurchasePrice.Text = theTotalPurchase.ToString();
+
+            decimal theTotalSellingPrice = bl.GetTotalSellingPrice();
+            txtBoxTotalSellingPrice.Text = theTotalSellingPrice.ToString();
+
+            decimal theProfit = 0;
+            theProfit = theTotalSellingPrice - theTotalPurchase;
+            txtBoxProfit.Text = theProfit.ToString();
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
 
         }
 

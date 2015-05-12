@@ -32,7 +32,7 @@ namespace SwuptiStock
 
         }
 
-        public void InsertData(string sql)
+        public void UpdateData(string sql)
         {
             using (var con = new SqlConnection(connectionString))
             {
@@ -55,7 +55,7 @@ System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo(
             //http://lamahashim.blogspot.dk/2010/04/c-read-insert-update-delete-from-sql.html
 string sql = "UPDATE Stock SET Purchase =" + Convert.ToString(stock.Purchase, culture) + ", SellingPrice = " + Convert.ToString(stock.SellingPrice, culture) + ", Number =" + Convert.ToString(stock.Number, culture) + ", StorageLocation = '" + stock.StorageLocation + "' WHERE ProductId = " + stock.ProductId;
 
-            InsertData(sql);
+            UpdateData(sql);
 
         }
 
@@ -94,6 +94,31 @@ string sql = "UPDATE Stock SET Purchase =" + Convert.ToString(stock.Purchase, cu
             string queryString = "SELECT * FROM Stock, Brands WHERE Stock.BrandId = Brands.BrandId AND ProductId = " + id;
             return GetData(queryString);
 
+        }
+
+        internal DataTable GetTotalProductAmount()
+        {
+            string queryString = "SELECT Number FROM Stock";
+            return GetData(queryString);
+        }
+
+        internal DataTable GetTotalPurchase()
+        {
+            string queryString = "SELECT Purchase, Number FROM Stock";
+            return GetData(queryString);
+        }
+
+        internal DataTable GetTotalSellingPrice()
+        {
+            string queryString = "SELECT SellingPrice, Number FROM Stock";
+            return GetData(queryString);
+        }
+
+        internal DataTable InsertNewData(int id, DateTime date, decimal totalNumber, decimal purchase, decimal sellingPrice, decimal profit)
+        {
+         
+            string queryString = "INSERT INTO Totals (InventoryDate, TotalNumber, TotalPurchase, TotalSellingPrice, Profit) VALUES (NOW(), )";
+            return GetData(queryString);
         }
 
 

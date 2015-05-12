@@ -97,10 +97,80 @@ namespace SwuptiStock
             stock.SellingPrice = sellingPrice;
             stock.Number = number;
             stock.StorageLocation = location;
-
-   
+  
             dal.UpdateStock(stock);
          
+        }
+
+        internal int GetTotalNumberOfProducts()
+        {
+            DataTable dt = dal.GetTotalProductAmount();
+                      
+            int number = 0;
+  
+            foreach (DataRow product in dt.Rows)
+            {
+                number += Convert.ToInt32(product["Number"].ToString());
+                   
+            }
+
+            return number;
+
+        }
+
+        internal decimal GetTotalPurchase()
+        {
+            DataTable dt = dal.GetTotalPurchase();
+
+            decimal purchase = 0;
+            decimal number = 0;
+            decimal total = 0;
+
+            foreach (DataRow info in dt.Rows)
+            {
+                purchase = Convert.ToDecimal(info["Purchase"].ToString());
+                number = Convert.ToDecimal(info["Number"].ToString());
+                total = (purchase * number) + total;
+
+            }
+
+            return total;
+         
+   
+        }
+
+        internal decimal GetTotalSellingPrice()
+        {
+            DataTable dt = dal.GetTotalSellingPrice();
+
+            decimal sellingPrice = 0;
+            decimal number = 0;
+            decimal total = 0;
+
+            foreach (DataRow info in dt.Rows)
+            {
+                sellingPrice = Convert.ToDecimal(info["SellingPrice"].ToString());
+                number = Convert.ToDecimal(info["Number"].ToString());
+                total = (sellingPrice * number) + total;
+            }
+
+            return total;
+
+        }
+
+        internal void InsertNewValues(int id, DateTime date, int totalNumber, decimal totalPurchase, decimal totalSellingPrice, decimal profit)
+        {
+            Totals totals = new Totals();
+
+            totals.Id = id;
+            totals.InventoryDate = date;
+            totals.TotalNumber = totalNumber;
+            totals.TotalPurchase = totalPurchase;
+            totals.TotalSellingPrice = totalSellingPrice;
+            totals.Propfit = profit;
+
+            dal.InsertNewData(totals);
+
         }
 
     }
