@@ -12,6 +12,8 @@ namespace SwuptiStock
 {
     class DAL
     {
+        System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+
         string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=U:\dokumenter\SwuptiDB.mdf;Integrated Security=True;Connect Timeout=30";
 
         public DataTable GetData(string sql)
@@ -46,7 +48,7 @@ namespace SwuptiStock
 
         internal void UpdateStock(Stock stock)
         {
-System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+
 
 
 
@@ -116,8 +118,10 @@ string sql = "UPDATE Stock SET Purchase =" + Convert.ToString(stock.Purchase, cu
 
         internal DataTable InsertNewData(Totals totals)
         {
-         
-            string queryString = "INSERT INTO Totals (InventoryDate, TotalNumber, TotalPurchase, TotalSellingPrice, Profit) VALUES (NOW(), )";
+        
+            // Convert.ToString(stock.Purchase, culture)
+
+            string queryString = "INSERT INTO Totals (InventoryDate, TotalNumber, TotalPurchase, TotalSellingPrice, Profit) VALUES (GETDATE() ," + Convert.ToString(totals.TotalNumber, culture) + ", " + Convert.ToString(totals.TotalPurchase, culture) + ", " + Convert.ToString(totals.TotalSellingPrice, culture) + ", " + Convert.ToString(totals.Profit, culture) + ")";
             return GetData(queryString);
         }
 

@@ -14,7 +14,7 @@ namespace SwuptiStock
         public int TotalNumber { get; set; }
         public decimal TotalPurchase { get; set; }
         public decimal TotalSellingPrice { get; set; }
-        public decimal Propfit { get; set; }
+        public decimal Profit { get; set; }
 
     }
 }

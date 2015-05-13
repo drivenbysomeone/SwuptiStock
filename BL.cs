@@ -158,16 +158,16 @@ namespace SwuptiStock
 
         }
 
-        internal void InsertNewValues(int id, DateTime date, int totalNumber, decimal totalPurchase, decimal totalSellingPrice, decimal profit)
+        internal void InsertNewValues(int totalNumber, decimal totalPurchase, decimal totalSellingPrice, decimal profit)
         {
             Totals totals = new Totals();
 
-            totals.Id = id;
-            totals.InventoryDate = date;
+           // totals.Id = id;
+            //totals.InventoryDate = date;
             totals.TotalNumber = totalNumber;
             totals.TotalPurchase = totalPurchase;
             totals.TotalSellingPrice = totalSellingPrice;
-            totals.Propfit = profit;
+            totals.Profit = profit;
 
             dal.InsertNewData(totals);
 

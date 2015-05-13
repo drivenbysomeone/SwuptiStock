@@ -13,7 +13,12 @@ namespace SwuptiStock
     public partial class Form1 : Form
     {
  
-        BL bl = new BL(); 
+        BL bl = new BL();
+
+        int allProducts = 0;
+        decimal theTotalPurchase = 0;
+        decimal theTotalSellingPrice = 0;
+        decimal theProfit = 0;
 
         public Form1()
         {
@@ -109,27 +114,33 @@ namespace SwuptiStock
         private void tabController_Enter(object sender, EventArgs e)
         {
 
+            
  
-            int allProducts = bl.GetTotalNumberOfProducts();
+            allProducts = bl.GetTotalNumberOfProducts();
             txtBoxAllProducts.Text = allProducts.ToString();
 
-            decimal theTotalPurchase = bl.GetTotalPurchase();
+            theTotalPurchase = bl.GetTotalPurchase();
             txtBoxTotalPurchasePrice.Text = theTotalPurchase.ToString();
 
-            decimal theTotalSellingPrice = bl.GetTotalSellingPrice();
+            theTotalSellingPrice = bl.GetTotalSellingPrice();
             txtBoxTotalSellingPrice.Text = theTotalSellingPrice.ToString();
 
-            decimal theProfit = 0;
+            
             theProfit = theTotalSellingPrice - theTotalPurchase;
             txtBoxProfit.Text = theProfit.ToString();
+
+
 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            bl.InsertNewValues(allProducts, theTotalPurchase, theTotalSellingPrice, theProfit);
 
-
+            
         }
+
+       
 
 
 

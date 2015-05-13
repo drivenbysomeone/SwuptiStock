@@ -486,6 +486,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(307, 211);
             this.dataGridView1.TabIndex = 10;
+            
             // 
             // lblPreviousProductsInStock
             // 
