@@ -125,6 +125,13 @@ string sql = "UPDATE Stock SET Purchase =" + Convert.ToString(stock.Purchase, cu
             return GetData(queryString);
         }
 
+        internal DataTable GetDataInGridView()
+        {
+            string queryString = "SELECT * FROM Totals";
+            return GetData(queryString);
+
+        }
+
 
     }
 }

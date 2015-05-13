@@ -26,7 +26,13 @@ namespace SwuptiStock
 
             allBrandsRevealed();
             allModelNamesRevealed();
+            dataInTotalsRevealed();
          
+        }
+
+        private void dataInTotalsRevealed()
+        {
+            dataGridView1.DataSource = bl.GetGridViewData();
         }
 
         private void allBrandsRevealed()
@@ -128,6 +134,7 @@ namespace SwuptiStock
             
             theProfit = theTotalSellingPrice - theTotalPurchase;
             txtBoxProfit.Text = theProfit.ToString();
+
 
 
 

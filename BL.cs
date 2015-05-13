@@ -173,5 +173,30 @@ namespace SwuptiStock
 
         }
 
+        internal List<Totals> GetGridViewData()
+        {
+            DataTable dt = dal.GetDataInGridView();
+            var list = new List<Totals>();
+
+            foreach (DataRow item in dt.Rows)
+            {
+                var theItem = new Totals();
+                theItem.Id = Convert.ToInt32(item["Id"].ToString());
+                theItem.InventoryDate = Convert.ToDateTime(item["InventoryDate"].ToString());
+                theItem.TotalNumber = Convert.ToInt32(item["TotalNumber"].ToString());
+                theItem.TotalPurchase = Convert.ToDecimal(item["TotalPurchase"].ToString());
+                theItem.TotalSellingPrice = Convert.ToDecimal(item["TotalSellingPrice"].ToString());
+                theItem.Profit = Convert.ToDecimal(item["Profit"].ToString());
+
+                list.Add(theItem);
+ 
+            }
+
+         //   list.Sort();
+
+            return list;
+
+        }
+
     }
 }
